@@ -1,0 +1,87 @@
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+      <!-- <form method="POST" enctype="multipart/form-data"> -->
+        <div class="row">
+          <!-- /.col (left) -->
+          <div class="col-md-6 offset-md-3">
+              <?php View::content(); ?>
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                   <img id="foto" class="profile-user-img img-fluid img-circle nav-link" 
+                        src="<?php echo $a->fotox;?>" alt="User profile picture"/>
+                </div>
+                <br>
+                <h3 class="profile-username text-center">Usuario <b><?php echo base64_decode($a->usu); ?></b></h3>
+                <br>
+        <?php echo Form::openmultipart(); ?>
+        <?php echo Form::hidden("a.id",NULL,123)?>
+
+                <input type="file" id="imagen" name="imagen" style="visibility: hidden;"/>
+                <!-- <input type="file" id="imagen" style="visibility: hidden;"></input> -->
+                <button type="button"  class="btn btn-primary " id="abrir">
+                <i class="fas fa-search-plus"></i> 
+                   Buscar Foto
+                </button>
+                <button type="submit"  class="btn btn-primary " >
+                <i class="far fa-save"></i> 
+                Guardar 
+                </button>
+         <?php echo Form::close(); ?>
+
+                <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
+              </div>
+              <!-- /.card-body -->
+            </div>              
+          </div>
+            <!-- /.card -->
+          </div>
+      </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<!-- ./wrapper -->
+<script type="text/javascript">
+ $(document).ready(function (){
+        $("#foto").click(function (){
+            $("#imagen").click();
+        });
+        $("#abrir").click(function (){
+            $("#imagen").click();
+        });
+
+       $("#imagen").change(function(e) {
+           addImage(e);
+       }        
+        );  
+      });
+                
+                
+ function addImage(e){
+      var file = e.target.files[0],
+      imageType = /image.*/;
+    
+      if (!file.type.match(imageType))
+       return;
+  
+      var reader = new FileReader();
+  
+      reader.onload = function(e){
+         var result=e.target.result;
+        $('#foto').attr("src",result);
+      }
+       
+      reader.readAsDataURL(file);
+     }
+                  </script>
+
+
+<!-- dP7uh8fI4> -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset=<?= APP_CHARSET ?> >
+  <title>KumbiaPHP Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/daterangepicker/daterangepicker.css">
+   <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+<!-- jQuery -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- InputMask -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/moment/moment.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>  
+<!-- date-range-picker -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?php echo PUBLIC_PATH ?>AdminLTE-3.0.5/dist/js/demo.js"></script>
+
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+<?php View::partial("kumbia/left") ?>
+  <!-- Main Sidebar Container -->
+<?php View::partial("kumbia/top",NULL,array("titulo"=>$titulo)) ?>
+
+  <?php View::content() ?>
+  <?php View::partial("kumbia/footer") ?>
+  </div>
+
+</body>
+</html>
+
+

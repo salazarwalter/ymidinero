@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset=<?= APP_CHARSET ?> >
+  <title>KumbiaPHP Framework</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+  
+  <?php View::content() ?>
+  <?php //View::partial('kumbia/footer') ?>
+
+<!-- jQuery -->
+<script src="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo PUBLIC_PATH?>AdminLTE-3.0.5/dist/js/adminlte.min.js"></script>
+</body>
+</html>
