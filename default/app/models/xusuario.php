@@ -22,7 +22,7 @@ class Xusuario extends ActiveRecord
  			$auth = new Auth("model", "class: xusuario", "usu: $usu", "cla: $cla");
             if ($auth->authenticate())
                 {
-                    Flash::valid("Bienvenido al sistema");
+                   // Flash::valid("Bienvenido al sistema");
                 } 
                 else 
                 {
